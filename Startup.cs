@@ -29,6 +29,8 @@ namespace Gregslist
             });
             services.AddSingleton<FakeDb>();
             services.AddTransient<CarsService>();
+            services.AddTransient<HousesService>();
+            services.AddTransient<JobsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
