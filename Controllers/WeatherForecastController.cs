@@ -3,9 +3,9 @@
 namespace Gregslist.Controllers
 {
   [ApiController]
-    [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
-    {
-        
-    }
+  [Route("[controller]")]
+  public class WeatherForecastController : ControllerBase
+  {
+
+  }
 }

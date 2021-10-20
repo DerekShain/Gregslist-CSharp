@@ -12,19 +12,19 @@ namespace Gregslist.Controllers
     private readonly JobsService _cs;
     public JobsController(JobsService cs)
     {
-      _cs = cs; 
+      _cs = cs;
     }
     [HttpGet]
     public ActionResult<List<Job>> GetJobs()
     {
       try
       {
-           var jobs = _cs.Get();
-           return Ok(jobs);
+        var jobs = _cs.Get();
+        return Ok(jobs);
       }
       catch (System.Exception error)
       {
-         return BadRequest(error.Message);
+        return BadRequest(error.Message);
       }
     }
     [HttpGet("{jobId}")]
@@ -32,12 +32,12 @@ namespace Gregslist.Controllers
     {
       try
       {
-           var job = _cs.Get(jobId);
-           return Ok(job);
+        var job = _cs.Get(jobId);
+        return Ok(job);
       }
       catch (System.Exception error)
       {
-          return BadRequest(error.Message);
+        return BadRequest(error.Message);
       }
     }
     [HttpPost]
@@ -45,12 +45,12 @@ namespace Gregslist.Controllers
     {
       try
       {
-           var job = _cs.CreateJob(jobData);
-           return Ok(job);
+        var job = _cs.CreateJob(jobData);
+        return Ok(job);
       }
       catch (System.Exception error)
       {
-          return BadRequest(error.Message);
+        return BadRequest(error.Message);
       }
     }
     [HttpPut("{jobId}")]
@@ -58,12 +58,12 @@ namespace Gregslist.Controllers
     {
       try
       {
-           var job = _cs.Edit(jobId, jobData);
-           return Ok(job);
+        var job = _cs.Edit(jobId, jobData);
+        return Ok(job);
       }
       catch (System.Exception error)
       {
-          return BadRequest(error.Message);
+        return BadRequest(error.Message);
       }
     }
     [HttpDelete("{jobId}")]
@@ -71,12 +71,12 @@ namespace Gregslist.Controllers
     {
       try
       {
-           var job = _cs.Delete(jobId);
-           return Ok(job);
+        var job = _cs.Delete(jobId);
+        return Ok(job);
       }
       catch (System.Exception error)
       {
-         return BadRequest(error.Message);
+        return BadRequest(error.Message);
       }
     }
   }

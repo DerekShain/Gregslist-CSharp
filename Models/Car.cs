@@ -4,7 +4,7 @@ namespace Gregslist.Models
 {
   public class Car
   {
-    public int Id { get; set;}
+    public int Id { get; set; }
 
     [Required]
     [MinLength(3)]
@@ -12,9 +12,9 @@ namespace Gregslist.Models
     public string Model { get; set; }
     public string Description { get; set; }
     public string Img { get; set; }
-    [Range (1, int.MaxValue)]
+    [Range(1, int.MaxValue)]
     public int Year { get; set; }
     public int Price { get; set; }
-    internal bool Removed { get; set;} = false;
+    internal bool Removed { get; set; } = false;
   }
 }

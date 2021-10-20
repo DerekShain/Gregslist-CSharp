@@ -26,7 +26,7 @@ namespace Gregslist.Service
     public Artist Get(int artistId)
     {
       var artist = _db.Artists.Find(music => music.Id == artistId && music.Removed == false);
-      if(artist == null)
+      if (artist == null)
       {
         throw new System.Exception("Invalid Id =(");
       }
@@ -36,13 +36,19 @@ namespace Gregslist.Service
     {
       var artist = Get(artistId);
       artist.Name = artistData.Name ?? artist.Name;
-      artist.Genre = artistData.Genre ?? artist.Genre;
+      artist.Era = artistData.Era ?? artist.Era;
+      artist.Country = artistData.Country ?? artist.Country;
+      artist.Type = artistData.Type ?? artist.Type;
+      artist.Skill = artistData.Skill;
+      artist.IsAlive = artistData.IsAlive;
+      // something here
       return artist;
     }
+    // This will be hard deletes
     public Artist Delete(int artistId)
     {
       var artist = Get(artistId);
-      artist.Removed = true;
+      // delete
       return artist;
     }
   }

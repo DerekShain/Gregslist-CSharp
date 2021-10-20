@@ -5,7 +5,7 @@ using Gregslist.Models;
 
 namespace Gregslist.Service
 {
-  public class CarsService 
+  public class CarsService
   {
     private readonly FakeDb _db;
     public CarsService(FakeDb db)

@@ -8,7 +8,12 @@ namespace Gregslist.Models
     [Required]
     [MinLength(3)]
     public string Name { get; set; }
-    public string Genre { get; set; }
-    internal bool Removed { get; set;} = false;
+    [Range(1, 10)]
+    public int Skill { get; set; }
+    public string Era { get; set; }
+    public string Country { get; set; }
+    public string Type { get; set; }
+    public bool IsAlive { get; set; }
+    // internal bool Removed { get; set;} = false;
   }
 }

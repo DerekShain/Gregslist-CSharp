@@ -12,19 +12,19 @@ namespace Gregslist.Controllers
     private readonly HousesService _cs;
     public HousesController(HousesService cs)
     {
-      _cs = cs; 
+      _cs = cs;
     }
     [HttpGet]
     public ActionResult<List<House>> GetHouses()
     {
       try
       {
-           var houses = _cs.Get();
-           return Ok(houses);
+        var houses = _cs.Get();
+        return Ok(houses);
       }
       catch (System.Exception error)
       {
-         return BadRequest(error.Message);
+        return BadRequest(error.Message);
       }
     }
     [HttpGet("{houseId}")]
@@ -32,12 +32,12 @@ namespace Gregslist.Controllers
     {
       try
       {
-           var house = _cs.Get(houseId);
-           return Ok(house);
+        var house = _cs.Get(houseId);
+        return Ok(house);
       }
       catch (System.Exception error)
       {
-          return BadRequest(error.Message);
+        return BadRequest(error.Message);
       }
     }
     [HttpPost]
@@ -45,12 +45,12 @@ namespace Gregslist.Controllers
     {
       try
       {
-           var house = _cs.CreateHouse(houseData);
-           return Ok(house);
+        var house = _cs.CreateHouse(houseData);
+        return Ok(house);
       }
       catch (System.Exception error)
       {
-          return BadRequest(error.Message);
+        return BadRequest(error.Message);
       }
     }
     [HttpPut("{houseId}")]
@@ -58,12 +58,12 @@ namespace Gregslist.Controllers
     {
       try
       {
-           var house = _cs.Edit(houseId, houseData);
-           return Ok(house);
+        var house = _cs.Edit(houseId, houseData);
+        return Ok(house);
       }
       catch (System.Exception error)
       {
-          return BadRequest(error.Message);
+        return BadRequest(error.Message);
       }
     }
     [HttpDelete("{houseId}")]
@@ -71,12 +71,12 @@ namespace Gregslist.Controllers
     {
       try
       {
-           var house = _cs.Delete(houseId);
-           return Ok(house);
+        var house = _cs.Delete(houseId);
+        return Ok(house);
       }
       catch (System.Exception error)
       {
-         return BadRequest(error.Message);
+        return BadRequest(error.Message);
       }
     }
   }
