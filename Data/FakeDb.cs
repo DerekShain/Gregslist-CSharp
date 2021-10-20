@@ -10,6 +10,7 @@ namespace Gregslist.Data
     public List<Car> Cars = new List<Car>();
     public List<Job> Jobs = new List<Job>();
     public List<House> Houses = new List<House>();
+    public List<Artist> Artists = new List<Artist>();
     public int GenerateId()
     {
       return _random.Next(1000, 10000000);

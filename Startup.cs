@@ -31,6 +31,7 @@ namespace Gregslist
             services.AddTransient<CarsService>();
             services.AddTransient<HousesService>();
             services.AddTransient<JobsService>();
+            services.AddTransient<ArtistsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -14,6 +14,6 @@ namespace Gregslist.Models
     public int Levels { get; set; }
     public int Year { get; set; }
     public int Price { get; set; }
-      internal bool Removed { get; set;} = false;
+    internal bool Removed { get; set;} = false;
   }
 }
